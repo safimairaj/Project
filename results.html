@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Results</title> 
+  <link rel="stylesheet" href="/static/style.css"> 
+</head> 
+<body> 
+  <div class="container"> 
+    <h1>Health Report for {{ name }}</h1> 
+    <h2>Status: {{ recommendations.status }}</h2> 
+    <h3>Diet Recommendations:</h3> 
+    <ul> 
+      {% for item in recommendations.diet %} 
+      <li>{{ item }}</li> 
+      {% endfor %} 
+    </ul> 
+    <a href="/">Go Back</a> 
+  </div> 
+</body> 
+</html> 
